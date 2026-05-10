@@ -959,7 +959,7 @@ export default function NotificationsPage() {
 
   const fetchNotifications = () => {
     setIsLoading(true);
-    const q = query(collection(db, "pays"), orderBy("createdDate", "desc"));
+    const q = query(collection(db, "requests"), orderBy("createdDate", "desc"));
     const unsubscribe = onSnapshot(
       q,
       (querySnapshot) => {
